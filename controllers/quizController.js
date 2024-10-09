@@ -1,6 +1,5 @@
 const Quiz = require('../models/quiz');
 const Question = require('../models/question');
-
 exports.getQuizzes = async (req, res) => {
     const quizzes = await Quiz.find().populate('questions');
     res.json(quizzes);
